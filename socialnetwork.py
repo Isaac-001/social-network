@@ -17,7 +17,8 @@ class User:
 
 ##    def unFriend():
 ##
-##    def viewNewsFeed():
+    def viewNewsFeed(self,friends):
+        self.f.posts.append(username)
 
 
 if __name__ == "__main__":
@@ -25,7 +26,27 @@ if __name__ == "__main__":
     lastName = "Ajayi"
     username = "Isaac_da_lion_killer"
     bio = "nah"
-    userID = 4171
+    userID = "4171"
 
     isaac = User(firstName, lastName, username, bio, userID)
-        
+    lucy = User("Lucy", "Jones", "lucccccy", "np", "5151")
+    jucy = User("Jucy", "Jones", "jucccccy", "the world is loss", "5191")
+    print("First name: ")
+    print(isaac.firstName)
+    print("Last Name: ")
+    print(lucy.firstName)
+    
+
+    isaac.addFriend("lucccccy")
+    isaac.addFriend("jucccccy")
+    
+    print(isaac.friends)
+    lucy.posts.append("chicken boi")
+    jucy.posts.append("Do it for our master, Daddy Trump -Obama 2018")
+##    print(lucy.posts)
+##    print(jucy.posts)
+    for f in isaac.friends:
+            print(f.posts)
+    isaac.viewNewsFeed(isaac.friends)
+    
+    
